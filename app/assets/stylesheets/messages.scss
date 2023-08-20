@@ -121,6 +121,7 @@
 
 .form-input {
   background-color: white;
+  display: flex;
   width: 100%;
 }
 
@@ -139,4 +140,18 @@
   height: 50px;
   margin-left: 15px;
   padding: 0 20px;
+}
+
+.form-image {
+  font-size: 12px;
+  background-color: lightblue;
+  color: white;
+  padding: 12px;
+  width: 60px;
+  margin: 5px 10px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
 }
