@@ -21,11 +21,16 @@
 
 ## users テーブル
 
-| Column             | Type   | Options                   |
-| ------------------ | ------ | ------------------------- |
-| nickname           | string | null: false               |
-| email              | string | null: false, unique: true |
-| encrypted_password | string | null: false               |
+| Column             | Type    | Options                   |
+| ------------------ | ------- | ------------------------- |
+| nickname           | string  | null: false               |
+| email              | string  | null: false, unique: true |
+| encrypted_password | string  | null: false               |
+| age                | integer |                           |
+| gender             | string  |                           |
+| prefecture         | string  | null: false               |
+| due_date           | date    | null: false               |
+
 
 ### Association
 
