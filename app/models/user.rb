@@ -5,5 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :nickname, presence: true
+  validates :password_confirmation, presence: true
+  validates :prefecture, presence: true
+  validates :due_date, presence: true
 
 end
