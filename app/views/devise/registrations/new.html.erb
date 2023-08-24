@@ -8,7 +8,7 @@
         <%= render "devise/shared/error_messages", resource: resource %>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :nickname%>
+            <%= f.label :"ニックネーム（必須）"%>
           </div>
           <div class='field-input'>
             <%= f.text_field :nickname, autofocus: true%>
@@ -16,7 +16,7 @@
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :email%>
+            <%= f.label :"メールアドレス（必須）"%>
           </div>
           <div class='field-input'>
             <%= f.email_field :email%>
@@ -24,7 +24,7 @@
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :password%>
+            <%= f.label :"パスワード（必須）"%>
             <i>(英数字6文字以上)</i>
           </div>
           <div class='field-input'>
@@ -33,10 +33,42 @@
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :password_confirmation%>
+            <%= f.label :"パスワード再入力（必須）"%>
           </div>
           <div class='field-input'>
             <%= f.password_field :password_confirmation, autocomplete: "off"%>
+          </div>
+        </div>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :"年齢" %>
+          </div>
+          <div class='field-input'>
+            <%= f.number_field :age %>
+          </div>
+        </div>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :"性別" %>
+          </div>
+          <div class='field-input'>
+            <%= f.select :gender, ["女性", "男性", "その他"] %>
+          </div>
+        </div>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :"出産予定地" %>
+          </div>
+          <div class='field-input'>
+            <%= f.text_field :prefecture %>
+          </div>
+        </div>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :"出産予定日" %>
+          </div>
+          <div class='field-input'>
+            <%= f.date_field :due_date %>
           </div>
         </div>
         <div class='actions'>
