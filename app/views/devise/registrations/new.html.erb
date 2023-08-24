@@ -8,7 +8,7 @@
         <%= render "devise/shared/error_messages", resource: resource %>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :"ニックネーム"%>
+            <%= f.label :"ニックネーム（必須）"%>
           </div>
           <div class='field-input'>
             <%= f.text_field :nickname, autofocus: true%>
@@ -16,7 +16,7 @@
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :"メールアドレス"%>
+            <%= f.label :"メールアドレス（必須）"%>
           </div>
           <div class='field-input'>
             <%= f.email_field :email%>
@@ -24,7 +24,7 @@
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :"パスワード"%>
+            <%= f.label :"パスワード（必須）"%>
             <i>(英数字6文字以上)</i>
           </div>
           <div class='field-input'>
@@ -33,7 +33,7 @@
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :"パスワード再入力"%>
+            <%= f.label :"パスワード再入力（必須）"%>
           </div>
           <div class='field-input'>
             <%= f.password_field :password_confirmation, autocomplete: "off"%>
