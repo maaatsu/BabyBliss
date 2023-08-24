@@ -13,19 +13,19 @@ RSpec.describe User, type: :model do
     end
 
     context '異常な場合' do
-      it 'nicknameが空では登録できない' do
-        @user.nickname = ''
+      it 'ニックネームが空では登録できない' do
+        @user.nickname = '' # 空のニックネーム設定
         @user.valid?
         expect(@user.errors[:nickname]).to include("can't be blank")
       end
 
-      it 'emailが空では登録できない' do
-        @user.email = ''
+      it 'メールアドレスが空では登録できない' do
+        @user.email = '' # 空のメールアドレス設定
         @user.valid?
         expect(@user.errors[:email]).to include("can't be blank")
       end
 
-      it '重複したemailが存在する場合は登録できない' do
+      it '重複したメールアドレスが存在する場合は登録できない' do
         @user.save
         another_user = FactoryBot.build(:user, email: @user.email)
         another_user.save
@@ -34,21 +34,21 @@ RSpec.describe User, type: :model do
         end
       end
 
-      it 'emailは@を含まないと登録できない' do
-        @user.email = 'testmail'
+      it 'メールアドレスは@を含まないと登録できない' do
+        @user.email = 'testmail' # @を含まないメールアドレス設定
         @user.valid?
         expect(@user.errors.full_messages).to include('Email is invalid')
       end
 
-      it 'passwordが空では登録できない' do
-        @user.password = ''
+      it 'パスワードが空では登録できない' do
+        @user.password = '' # 空のパスワード設定
         @user.valid?
         expect(@user.errors.full_messages).to include("Password can't be blank")
       end
 
-      it 'passwordが5文字以下では登録できない' do
-        @user.password = '00000'
-        @user.password_confirmation = '00000'
+      it 'パスワードが5文字以下では登録できない' do
+        @user.password = '00000' # 5桁のパスワード設定
+        @user.password_confirmation = '00000' # 5桁のパスワード再入力設定
         @user.valid?
         expect(@user.errors.full_messages).to include('Password is too short (minimum is 6 characters)')
       end
@@ -71,9 +71,9 @@ RSpec.describe User, type: :model do
         expect(@user.errors[:password]).to include('は英字と数字の両方を含めて設定してください') if @user.password =~ /^(?=.*[a-zA-Z])(?=.*[0-9]).+$/
       end
 
-      it 'passwordとpassword_confirmationが不一致では登録できない' do
-        @user.password = '123456'
-        @user.password_confirmation = '1234567'
+      it 'パスワードとパスワード再入力が不一致では登録できない' do
+        @user.password = '123456' # 6桁のパスワード設定
+        @user.password_confirmation = '1234567' # 7桁のパスワード設定
         @user.valid?
         expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
       end
