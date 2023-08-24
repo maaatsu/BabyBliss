@@ -6,4 +6,7 @@ class User < ApplicationRecord
 
   validates :nickname, presence: true, length: { maximum: 6 }
   validates :password_confirmation, presence: true
+
+  has_many :room_users
+  has_many :rooms, through: :room_users
 end
