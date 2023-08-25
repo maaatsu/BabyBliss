@@ -1,0 +1,26 @@
+ja:
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M"
+
+  errors:
+      messages:
+        not_saved: "保存できませんでした。入力内容を確認してください。"
+  activerecord:
+    models:
+      user: "ユーザー"
+    attributes:
+      user:
+        nickname: "ニックネーム"
+        email: "メールアドレス"
+        password: "パスワード"
+    errors:
+      models:
+        user:
+          attributes:
+            nickname:
+              blank: "を入力してください"
+            email:
+              blank: "を入力してください"
+            password:
+              blank: "を入力してください"
