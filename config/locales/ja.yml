@@ -24,3 +24,14 @@ ja:
               blank: "を入力してください"
             password:
               blank: "を入力してください"
+    models:
+      room: "チャットルーム"
+    attributes:
+      room:
+        name: "ルーム名"
+    errors:
+      models:
+        room:
+          attributes:
+            name:
+              blank: "を入力してください"
