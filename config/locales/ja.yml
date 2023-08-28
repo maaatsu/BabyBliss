@@ -4,16 +4,28 @@ ja:
       default: "%Y/%m/%d %H:%M"
 
   errors:
-      messages:
-        not_saved: "保存できませんでした。入力内容を確認してください。"
+    messages:
+      not_saved: "保存できませんでした。入力内容を確認してください."
+
   activerecord:
     models:
       user: "ユーザー"
+      room: "チャットルーム"
+      message: "メッセージ"
+
     attributes:
       user:
         nickname: "ニックネーム"
         email: "メールアドレス"
         password: "パスワード"
+      room:
+        name: "ルーム名"
+      message:
+        content: "メッセージ"
+        image: "画像"
+        room: "チャットルーム"
+        user: "ユーザー名"
+
     errors:
       models:
         user:
@@ -24,14 +36,17 @@ ja:
               blank: "を入力してください"
             password:
               blank: "を入力してください"
-    models:
-      room: "チャットルーム"
-    attributes:
-      room:
-        name: "ルーム名"
-    errors:
-      models:
         room:
           attributes:
             name:
               blank: "を入力してください"
+        message:
+          attributes:
+            content:
+              blank: "を入力してください"
+            image:
+              blank: "を入力してください"
+            room:
+              required: "は存在しないチャットルームです"
+            user:
+              required: "は存在しないユーザーです"
