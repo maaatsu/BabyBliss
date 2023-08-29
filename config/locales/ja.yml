@@ -18,6 +18,7 @@ ja:
         nickname: "ニックネーム"
         email: "メールアドレス"
         password: "パスワード"
+        password_confirmation: "パスワード再入力"
       room:
         name: "ルーム名"
       message:
@@ -34,8 +35,14 @@ ja:
               blank: "を入力してください"
             email:
               blank: "を入力してください"
+              taken: "メールアドレスはすでに存在します"
+              invalid: "メールアドレスは無効です"
             password:
               blank: "を入力してください"
+              too_short: "は%{count}文字以上で入力してください"
+              confirmation: "が一致しません"
+            password_confirmation:
+              confirmation: "が一致しません"
         room:
           attributes:
             name:
