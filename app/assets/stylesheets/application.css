@@ -17,3 +17,11 @@
  * {
   box-sizing: border-box;
 }
+
+.header {
+  font-size: 20px;
+  padding: 14px;
+  text-decoration: none;
+  background-color: #A9A9A9;
+  text-decoration: none;
+}
