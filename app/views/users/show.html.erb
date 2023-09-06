@@ -1,0 +1,9 @@
+<div class="contents row">
+  <p><%= @nickname %>さんの投稿一覧</p>
+  <% @messages.each do |message| %>
+    <div class="content_post" style="background-image: url(<%= message.image %>);">
+      <p><%= message.content %></p>
+
+    </div>
+  <% end %>
+</div>
