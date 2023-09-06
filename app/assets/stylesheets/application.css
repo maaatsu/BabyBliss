@@ -23,5 +23,27 @@
   padding: 14px;
   text-decoration: none;
   background-color: #A9A9A9;
-  text-decoration: none;
+  height: 60px;
+  display: flex; /* Flexbox を有効にする */
+  justify-content: space-between; /* 子要素を水平方向に均等に配置 */
+  align-items: center; /* 子要素を垂直方向に中央に配置 */
+}
+
+.user_info {
+  display: flex; /* ユーザー名とリンクを横並びにする */
+  align-items: center; /* ユーザー名とリンクを垂直方向に中央に配置 */
+  margin-right: 10px; /* リンク間にスペースを追加 */
+}
+
+.user_info a {
+  color: black; /* リンクの文字色を黒に設定 */
+  text-decoration: none; /* 下線を無効にする */
+}
+
+.user__info li {
+  margin-right: 10px; /* リンク間にスペースを追加 */
+}
+
+.user_links{
+  margin-left: 10px; /* リンク間にスペースを追加 */
 }

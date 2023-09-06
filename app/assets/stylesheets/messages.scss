@@ -5,13 +5,12 @@
 .side-bar {
   background-color: #848484;
   width: 300px;
-  height: 100vh;
 }
 
 .side-bar-header {
-  height: 100px;
+  height: 80px;
   padding: 0 20px;
-  background-color: #A9A9A9;
+  background-color: #a37373;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,7 +32,7 @@
 
 .rooms {
   background-color: #A9A9A9;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 80px - 80px);
   padding: 0 20px;
   overflow: scroll;
 }
@@ -53,11 +52,11 @@
 }
 
 .chat-header {
-  height: 100px;
+  height: 80px;
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
-  background-color: #DCDCDC;
+  background-color: #3a1313;
 
 }
 
@@ -80,7 +79,7 @@
 
 .messages {
   background-color: #DCDCDC;
-  height: calc(100vh - 100px - 90px);
+  height: calc(100vh - 80px - 80px - 90px);
   padding: 46px 40px 0;
   overflow: scroll;
 }
